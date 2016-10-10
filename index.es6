@@ -10,7 +10,9 @@ export default class StatelessEditor extends React.Component {
       this.setState({editorState});
       this.props.onStateChange(editorState);
     };
+
     this.getEditorState = () => this.state.editorState;
+    this.setEditorState = (editorState) => this.state = editorState;
   }
 
   render() {
