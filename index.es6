@@ -12,13 +12,16 @@ export default class StatelessEditor extends React.Component {
     };
 
     this.getEditorState = () => this.state.editorState;
-    this.setEditorState = (editorState) => this.state = editorState;
+    this.setEditorState = (newState) => this.setState({editorState: newState});
+    this.focus = () => this.refs.editor.focus();
+    this.blur = () => this.refs.editor.blur();
   }
 
   render() {
     const {editorState} = this.state;
     return <Editor editorState={editorState}
                    onChange={this.onChange}
+                   ref="editor"
                    {...this.props}
            />;
   }
