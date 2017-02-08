@@ -1,6 +1,6 @@
 {
   "name": "draft-cljs",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Hack to use draft-js editor with ClojureScript & re-frame simplier and without problems with state management",
   "main": "lib/index.js",
   "author": {

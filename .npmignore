@@ -1,4 +1,6 @@
-/*
-!/LICENSE
-!/index.js
-!/README.md
+/src/
+node_modules
+npm-debug.log
+
+tests
+docs
