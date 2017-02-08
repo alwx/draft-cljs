@@ -1,14 +1,15 @@
 {
   "name": "draft-cljs",
-  "version": "1.0.8",
-  "description": "Hack to use draft-js editor with ClojureScript simplier and without problems with state management",
-  "main": "index.js",
+  "version": "2.1.0",
+  "description": "Hack to use draft-js editor with ClojureScript & re-frame simplier and without problems with state management",
+  "main": "lib/index.js",
   "author": {
     "name": "Alexander Pantyukhov",
     "email": "me@alwx.me"
   },
   "scripts": {
-    "prepublish": "babel index.es6 -d ."
+    "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src",
+    "prepublish": "npm run build"
   },
   "license": "MIT",
   "keywords": [
@@ -16,18 +17,24 @@
     "draft",
     "draft-js"
   ],
-  "homepage": "https://github.com/alwx/draft-cljs",
-  "bugs": {
-    "url": "https://github.com/alwx/draft-cljs/issues"
-  },
-  "peerDependencies": {
-    "react": "^15.3.2",
-    "draft-js": "^0.9.1",
-    "draft-js-plugins-editor": "^2.0.0-beta9"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/alwx/draft-cljs.git"
+    "url": "https://github.com/alwx/draft-cljs.git"
+  },
+  "scripts": {
+    "build": "BABEL_ENV=production node_modules/.bin/babel --out-dir='lib' --ignore='__tests__/*' src",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "decorate-component-with-props": "^1.0.2",
+    "draft-js": ">=0.9.1",
+    "find-with-regex": "^1.0.2",
+    "immutable": "~3.7.4",
+    "union-class-names": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
